@@ -78,11 +78,6 @@ class ChartViewController: UIViewController {
         pieChartView.drawHoleEnabled = true
         pieChartView.legend.enabled = true
         pieChartView.animate(xAxisDuration: 1.4, easingOption: .easeInOutBack)
-    }        
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
