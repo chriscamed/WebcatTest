@@ -18,16 +18,13 @@ class PollTableViewController: UITableViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         UIApplication.shared.statusBarStyle = .default
         let apiConnection = APIConnection()
+        apiConnection.delegate = self
         apiConnection.fetchQuestions { data in
             if let questions = data as? [Question] {
                 self.questions = questions
                 self.loadNextQuestion()
             }
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,7 +40,9 @@ class PollTableViewController: UITableViewController {
             let range = NSMakeRange(0, tableView.numberOfSections)
             let sections = NSIndexSet(indexesIn: range)
             //tableView.reloadData()
-            tableView.reloadSections(sections as IndexSet, with: .automatic)
+            DispatchQueue.main.async {
+                self.tableView.reloadSections(sections as IndexSet, with: .automatic)
+            }
         }
         
     }
@@ -126,4 +125,16 @@ class PollTableViewController: UITableViewController {
         }
     }
     
+    func showAlertMessage(withMessage message: String) {
+        let alertView = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    
+}
+
+extension PollTableViewController: APIConnectionDelegate {
+    func noInternetConnection() {
+        showAlertMessage(withMessage: "There's no internet connection")
+    }
 }

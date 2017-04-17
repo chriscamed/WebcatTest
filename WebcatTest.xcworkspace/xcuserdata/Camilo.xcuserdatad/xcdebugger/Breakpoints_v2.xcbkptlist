@@ -21,53 +21,5 @@
             </Actions>
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WebcatTest/Model/Connection/APIConnection.swift"
-            timestampString = "514084127.963263"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "sendNewQuestion(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WebcatTest.APIConnection.(sendNewQuestion (WebcatTest.Question) -&gt; ()).(closure #1)"
-                  moduleName = "WebcatTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Camilo/Documents/Proyectos_iOS/WebcatTest/WebcatTest/Model/Connection/APIConnection.swift"
-                  timestampString = "514097225.538723"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "636">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WebcatTest.APIConnection.(sendNewQuestion (WebcatTest.Question) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "WebcatTest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Camilo/Documents/Proyectos_iOS/WebcatTest/WebcatTest/Model/Connection/APIConnection.swift"
-                  timestampString = "514097225.540479"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

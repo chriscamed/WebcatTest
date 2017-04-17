@@ -9,11 +9,11 @@ List of pods used in the project:
 
 2. pod 'ReachabilitySwift'
   - This library allows to check the status of the network.
-  
+
 3. pod 'Charts'
   - A library to add different types of charts. It's easy to use and makes the user experience better when showing statistics or results.
 
-The app has three options: Start Poll, Create Poll and Show Statistics.
+The app has three options: Start Poll, Create Poll and View Statistics.
 
 1. The first option allows the user to select one option per question. All the new questions are retrieved from a web service and stored locally.
 2. The second option allows the user to add a new question with multiple options. The new question is stored locally and sent to the web service.

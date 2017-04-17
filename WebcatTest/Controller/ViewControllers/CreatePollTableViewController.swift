@@ -116,7 +116,9 @@ class CreatePollTableViewController: UITableViewController {
                  are fetched and stored locally from the service instead.
                  */
                 //WBQuestionMO.saveQuestionToLocalDatabase(question)
-                APIConnection().sendNewQuestion(question)
+                let apiConnection = APIConnection()
+                apiConnection.delegate = self
+                apiConnection.sendNewQuestion(question)
                 navigationController?.popToRootViewController(animated: true)
             }
             
@@ -148,4 +150,10 @@ class CreatePollTableViewController: UITableViewController {
         present(alertView, animated: true, completion: nil)
     }
 
+}
+
+extension CreatePollTableViewController: APIConnectionDelegate {
+    func noInternetConnection() {
+        showAlertMessage(withMessage: "There's no internet connection")
+    }
 }
